@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Page Creation with Specific Elements - Stage 1</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="content">
+      <div class="container">
+        <!--  Left Content-->
+        <div class="left-content">
+          <img
+            src="image/IMG_1739.jpg"
+            alt="Akintunde Ilerioluwa"
+            data-testid="slackDisplayImage"
+          />
+        </div>
+
+        <!--  Right Content-->
+        <div class="right-content">
+          <h1 class="header-text" data-testid="slackUserName">
+            Akintunde Ilerioluwa
+          </h1>
+          <div class="space-between">
+            <label class="label-font">Current Day: </label>
+            <span
+              id="currentDay"
+              class="font"
+              data-testid="currentDayOfTheWeek"
+            ></span>
+          </div>
+
+          <div class="space-between">
+            <label class="label-font">Current UTC time: </label>
+            <span
+              id="currentUTC"
+              class="font"
+              data-testid="currentUTCTime"
+            ></span>
+          </div>
+
+          <div class="space-between">
+            <label class="label-font">Track: </label>
+            <span class="font" data-testid="myTrack"> Frontend</span>
+          </div>
+
+          <a
+            href="https://github.com/cybprom/HNGx-Stage-1"
+            class="btn"
+            data-testid="githubURL"
+            target="_blank"
+            >GitHub Link</a
+          >
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
