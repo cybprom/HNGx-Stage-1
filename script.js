@@ -14,14 +14,23 @@ const displayCurrDay = () => {
   const today = new Date();
   const currentDay = weekDays[today.getUTCDay()];
   day.textContent = currentDay;
-};
 
-const displayTimeMilli = () => {
-  const today = new Date();
+  // console.log(currentUTC.toString());
+
+  // Can actually just use Date.now()
+  console.log(Date.now());
+
   const currentUTC = today.getTime();
-  console.log(currentUTC);
   UTC.textContent = currentUTC;
 };
 
-setInterval(displayTimeMilli, 1000);
+const displayTimeMilli = () => {
+  // const today = new Date();
+  // const currentUTC = today.getTime();
+  // console.log(currentUTC.toString());
+  // UTC.textContent = currentUTC;
+};
+
+// setInterval(displayTimeMilli, 100);
+setInterval(displayCurrDay, 1000);
 displayCurrDay();
