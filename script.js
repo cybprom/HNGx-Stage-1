@@ -1,8 +1,5 @@
-const day = document.querySelector("#currentDay");
-const UTC = document.querySelector("#currentUTC");
-
-const displayCurrDay = () => {
-  const weekDays = [
+function UpdateTime() {
+  const days = [
     "Sunday",
     "Monday",
     "Tuesday",
@@ -11,18 +8,19 @@ const displayCurrDay = () => {
     "Friday",
     "Saturday",
   ];
-  const today = new Date();
-  const currentDay = weekDays[today.getUTCDay()];
-  day.textContent = currentDay;
+  const current = new Date();
+  const day = days[current.getUTCDay()];
+  const time = current.getTime();
 
-  // console.log(currentUTC.toString());
+  const dayofweek = document.getElementById("currentday");
+  const timenow = document.getElementById("currenttime");
 
-  // Can actually just use Date.now()
-  // console.log(Date.now());
-
-  const currentUTC = today.getTime();
-  UTC.textContent = currentUTC.toString();
-};
-
-displayCurrDay();
-setInterval(displayCurrDay, 1);
+  if (dayofweek && timenow) {
+    dayofweek.textContent = day;
+    timenow.textContent = time.toString();
+  }
+}
+document.addEventListener("DOMContentLoaded", function () {
+  UpdateTime();
+  setInterval(UpdateTime, 1);
+});
